@@ -1,0 +1,22 @@
+{
+  "name": "karanparhar.github.io",
+  "version": "1.0.0",
+  "description": "karan's portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karanparhar/karanparhar.github.io.git"
+  },
+  "author": "karan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karanparhar/karanparhar.github.io/issues"
+  },
+  "homepage": "https://github.com/karanparhar/karanparhar.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^3.4.1"
+  }
+}

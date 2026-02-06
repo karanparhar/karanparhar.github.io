@@ -1,0 +1,10 @@
+# robots.txt for karanparhar.github.io
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://karanparhar.github.io/sitemap.xml
+
+# Disallow specific paths if needed
+Disallow: /vendor/
+Disallow: /node_modules/

@@ -1,9 +1,18 @@
 #sideNav {
   .navbar-nav .nav-item .nav-link {
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: rgba($white, 0.1);
+      border-radius: 0.25rem;
+      margin: 0.25rem;
+    }
   }
+  
   .navbar-toggler {
     &:focus {
       outline-color: lighten($primary, 15%);
@@ -23,17 +32,24 @@
 
     width: $sidebar-base-width;
     height: 100vh;
+    
     .navbar-brand {
       display: flex;
-
       margin: auto auto 0;
       padding: 0.5rem;
+      
       .img-profile {
-        max-width: 10rem;
-        max-height: 10rem;
+        max-width: 9rem;
+        max-height: 9rem;
         border: 0.5rem solid fade-out($white, 0.8);
+        transition: all 0.3s ease;
+        
+        &:hover {
+          transform: scale(1.05);
+        }
       }
     }
+    
     .navbar-collapse {
       display: flex;
       align-items: flex-start;
@@ -41,14 +57,24 @@
 
       width: 100%;
       margin-bottom: auto;
+      
       .navbar-nav {
         flex-direction: column;
-
         width: 100%;
+        
         .nav-item {
           display: block;
+          
           .nav-link {
             display: block;
+            text-align: center;
+            padding: 0.75rem 1rem;
+            
+            &:hover {
+              background-color: rgba($white, 0.1);
+              border-radius: 0.25rem;
+              margin: 0.25rem;
+            }
           }
         }
       }

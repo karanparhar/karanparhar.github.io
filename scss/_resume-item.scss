@@ -2,26 +2,59 @@ section.resume-section {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
   max-width: 75rem;
+  
   .resume-item {
-    .resume-content {}
+    .resume-content {
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      background-color: $white;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+    }
+    
     .resume-date {
       min-width: none;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: $primary;
     }
   }
 }
+
 @media (min-width: 768px) {
   section.resume-section {
     min-height: 100vh;
+    
     .resume-item {
       .resume-date {
-        min-width: 18rem;
+        min-width: 15rem;
+        text-align: right;
       }
     }
   }
 }
+
 @media (min-width: 992px) {
   section.resume-section {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
+    
+    .resume-item {
+      .resume-content {
+        margin-bottom: 2rem;
+        padding: 2rem;
+      }
+      
+      .resume-date {
+        min-width: 18rem;
+        text-align: right;
+      }
+    }
   }
 }

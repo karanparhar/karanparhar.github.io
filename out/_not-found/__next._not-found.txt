@@ -2,4 +2,4 @@
 2:I[39756,["/_next/static/chunks/0j2ydi96ah8am.js","/_next/static/chunks/0eseii85.b52c.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"default"]
 3:I[37457,["/_next/static/chunks/0j2ydi96ah8am.js","/_next/static/chunks/0eseii85.b52c.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"default"]
 4:[]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"Esx-i0GvZBV3I7MCU0Q8s"}
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"DLR8X830FBzFwndZsCgXY"}

@@ -10,6 +10,7 @@ This is the professional portfolio website of **Karanjit Singh**, a Principal So
 ## Professional Summary
 
 Principal Software Engineer with proven track record of:
+
 - Leading high-performing teams
 - Architecting scalable solutions
 - Delivering complex projects across multiple industries
@@ -19,21 +20,25 @@ Principal Software Engineer with proven track record of:
 ## Technical Expertise
 
 ### Languages
+
 - Golang
 - Python
 - Shell Scripting
 
 ### Frameworks & Tools
+
 - Docker
 - Kubernetes
 - Microservices Architecture
 
 ### Cloud Platforms
+
 - Google Kubernetes Engine (GKE)
 - Azure Kubernetes Service (AKS)
 - AWS
 
 ### Databases
+
 - MySQL
 - PostgreSQL
 - Neo4J
@@ -41,6 +46,7 @@ Principal Software Engineer with proven track record of:
 ## Current Role
 
 **Software Developer at IBM Labs** (December 2024 - Present)
+
 - Developing robust software solutions for IBM Cloud
 - Managing and optimizing IBM Cloud Bare Metal Servers
 - Working with cloud-native applications and Kubernetes
@@ -61,10 +67,11 @@ Visit my portfolio at: [https://karanparhar.github.io/](https://karanparhar.gith
 ## Development
 
 This portfolio is built using:
-- Bootstrap 4
-- HTML5/CSS3
-- JavaScript
-- Gulp for build automation
+
+- Next.js
+- TypeScript
+- TailwindCSS
+- Lucide React
 
 ### Setup
 
@@ -73,7 +80,29 @@ This portfolio is built using:
 npm install
 
 # Start development server
-npm start
+npm run dev
+```
+
+## Project Structure
+
+```
+├── app/
+│   ├── layout.tsx         # Root layout with Sidebar
+│   ├── page.tsx           # Main homepage
+│   ├── globals.css        # Global styles
+│   └── not-found.tsx      # 404 page
+├── components/            # React components
+│   ├── ProfileHeader.tsx
+│   ├── ExperienceSection.tsx
+│   ├── ProjectsSection.tsx
+│   ├── SkillsSection.tsx
+│   ├── EducationSection.tsx
+│   ├── ContactSection.tsx
+│   └── Sidebar.tsx
+├── public/
+│   ├── img/               # Static images
+│   └── resume/            # Resume files
+└── package.json
 ```
 
 ## License

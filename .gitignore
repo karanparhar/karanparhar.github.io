@@ -5,6 +5,7 @@ _next/
 index.html
 404.html
 .nojekyll
+.playwright-mcp/
 *.tsbuildinfo
 .DS_Store
 **/.DS_Store

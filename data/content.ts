@@ -188,7 +188,14 @@ export const portfolioData = {
     linkedin: 'https://www.linkedin.com/in/karanjit-singh-78b33a129/',
     github: 'https://github.com/karanparhar',
     twitter: 'https://twitter.com/karanjitparhar',
-    facebook: 'https://www.facebook.com/karan.parhar.5',
-  },
+    facebook: 'https://facebook.com/karan.parhar.5',
+   },
+  socialLinks: [
+    { key: 'linkedin', href: 'https://www.linkedin.com/in/karanjit-singh-78b33a129/', label: 'LinkedIn', icon: 'Linkedin' },
+    { key: 'github', href: 'https://github.com/karanparhar', label: 'GitHub', icon: 'Github' },
+    { key: 'twitter', href: 'https://twitter.com/karanjitparhar', label: 'Twitter', icon: 'Twitter' },
+    { key: 'facebook', href: 'https://facebook.com/karan.parhar.5', label: 'Facebook', icon: 'Facebook' },
+    { key: 'email', href: 'mailto:karan.parhar90@gmail.com', label: 'Email', icon: 'Mail' },
+   ],
   availableFor: ['Cloud Architecture', 'Backend Development', 'DevOps Engineering', 'Technical Leadership'],
 };

@@ -1,50 +1,55 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Easing } from 'framer-motion';
 import { experiences } from '../data/content';
 import { Building2 } from 'lucide-react';
+
+const EASE: Easing = 'easeOut';
+
+const reveal = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.2 },
+  transition: { duration: 0.5, ease: EASE },
+};
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.1, duration: 0.4 },
-    }),
+    transition: { delay: i * 0.08, duration: 0.5, ease: EASE },
+       }),
 };
 
 export default function ExperienceSection() {
-  const ref = useRef(null);
-
   return (
-       <section id="experience" ref={ref} className="py-28 md:py-36 px-6 md:px-12 lg:px-20 relative">
-          {/* Background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.02] to-transparent pointer-events-none" />
+         <section id="experience" className="py-28 md:py-36 px-6 md:px-12 lg:px-20 relative">
+            {/* Background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.02] to-transparent pointer-events-none" />
 
-          <div className="relative z-10 max-w-4xl">
-            <motion.h2
-              className="section-title mb-16"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-            >
-              Experience
-            </motion.h2>
+            <div className="relative z-10 max-w-4xl">
+              <motion.h2
+               className="section-title mb-16"
+               {...reveal}
+              >
+               Experience
+              </motion.h2>
 
-          <div className="relative">
-             {/* Timeline line */}
-             <div className="absolute left-0 md:left-0 top-2 bottom-0 w-px bg-gradient-to-b from-accent/40 via-accent/20 to-transparent" />
+            <div className="relative">
+               {/* Timeline line */}
+               <div className="absolute left-0 md:left-0 top-2 bottom-0 w-px bg-gradient-to-b from-accent/40 via-accent/20 to-transparent" />
 
-             {experiences.map((exp, i) => (
-               <motion.div
-              key={exp.company}
-              className="relative pl-10 md:pl-12 mb-12 last:mb-0"
-              custom={i}
-              initial="hidden"
-              animate="visible"
-              variants={cardVariants}
-               >
+               {experiences.map((exp, i) => (
+                 <motion.div
+               key={exp.company}
+               className="relative pl-10 md:pl-12 mb-12 last:mb-0"
+               custom={i}
+               initial="hidden"
+               whileInView="visible"
+               viewport={{ once: true, amount: 0.2 }}
+               variants={cardVariants}
+                 >
                  {/* Timeline dot */}
                  <div className="absolute left-[-3px] md:left-[-1px] top-3 w-3 h-3 rounded-full bg-bg-deep border-2 border-accent/60 z-10" />
 

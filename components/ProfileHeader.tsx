@@ -3,14 +3,7 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { portfolioData } from '../data/content';
-import { Linkedin, Github, Twitter, Facebook } from 'lucide-react';
-
-const SOCIAL_CONFIG = [
-   { key: 'linkedin', href: portfolioData.social.linkedin, icon: Linkedin, label: 'LinkedIn' },
-   { key: 'github', href: portfolioData.social.github, icon: Github, label: 'GitHub' },
-   { key: 'twitter', href: portfolioData.social.twitter, icon: Twitter, label: 'Twitter' },
-   { key: 'facebook', href: portfolioData.social.facebook, icon: Facebook, label: 'Facebook' },
-] as const;
+import SocialLinks from './SocialLinks';
 
 export default function ProfileHeader() {
   const ref = useRef(null);
@@ -85,26 +78,15 @@ export default function ProfileHeader() {
             </div>
           </motion.div>
 
-          {/* Social Links */}
-          <motion.div
-          className="flex gap-3 mt-10"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.4 }}
-          >
-            {SOCIAL_CONFIG.map(({ key, href, icon: Icon }) => (
-              <a
-              key={key}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-lg bg-bg-elevated/50 border border-border flex items-center justify-center text-text-muted hover:text-accent hover:border-accent/30 hover:bg-accent/5 transition-all duration-300"
-              aria-label={key}
-              >
-                <Icon size={18} />
-              </a>
-            ))}
-          </motion.div>
+            {/* Social Links */}
+            <motion.div
+           className="mt-10"
+           initial={{ opacity: 0 }}
+           animate={{ opacity: 1 }}
+           transition={{ delay: 0.6, duration: 0.4 }}
+            >
+              <SocialLinks size={18} />
+            </motion.div>
         </motion.div>
 
         {/* Scroll indicator */}

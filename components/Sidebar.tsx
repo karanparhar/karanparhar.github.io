@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { portfolioData } from '../data/content';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronUp, Linkedin, Github, Twitter, Facebook } from 'lucide-react';
+import { Menu, X, ChevronUp } from 'lucide-react';
+import SocialLinks from './SocialLinks';
 
 const NAV_ITEMS = [
   { href: '#about', label: 'About' },
@@ -102,26 +103,8 @@ export default function Sidebar() {
 
         {/* Bottom Section */}
         <div className="w-full mt-auto pt-6 flex flex-col items-center gap-4">
-          {/* Social Links */}
-          <div className="flex gap-3">
-            {[
-              { href: portfolioData.social.linkedin, label: 'LinkedIn', icon: Linkedin },
-              { href: portfolioData.social.github, label: 'GitHub', icon: Github },
-              { href: portfolioData.social.twitter, label: 'Twitter', icon: Twitter },
-              { href: portfolioData.social.facebook, label: 'Facebook', icon: Facebook },
-            ].map(({ href, label, icon: Icon }) => (
-              <a
-                key={href}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-bg-elevated border border-border flex items-center justify-center text-text-muted hover:text-accent hover:border-accent/30 hover:bg-accent/5 transition-all duration-300"
-                aria-label={label}
-              >
-                <Icon size={16} />
-              </a>
-            ))}
-          </div>
+            {/* Social Links */}
+            <SocialLinks size={16} />
 
           {/* Resume Download */}
           <a

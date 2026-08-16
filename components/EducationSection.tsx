@@ -1,35 +1,38 @@
 'use client';
 
-import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { education } from '../data/content';
 import { GraduationCap } from 'lucide-react';
 
+const reveal = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.2 },
+  transition: { duration: 0.5, ease: 'easeOut' },
+} as const;
+
 export default function EducationSection() {
-  const ref = useRef(null);
-
   return (
-       <section id="education" ref={ref} className="py-28 md:py-36 px-6 md:px-12 lg:px-20 relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.015] to-transparent pointer-events-none" />
+            <section id="education" className="py-28 md:py-36 px-6 md:px-12 lg:px-20 relative">
+             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.015] to-transparent pointer-events-none" />
 
-          <div className="relative z-10 max-w-4xl">
-            <motion.h2
-              className="section-title mb-16"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-            >
-              Education
-            </motion.h2>
-
-          <div className="mt-8">
-             {education.map((edu, i) => (
-               <motion.div
-              key={edu.university}
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1, duration: 0.4 }}
+             <div className="relative z-10 max-w-4xl">
+               <motion.h2
+               className="section-title mb-16"
+                {...reveal}
                >
+               Education
+               </motion.h2>
+
+             <div className="mt-8">
+                {education.map((edu, i) => (
+                  <motion.div
+               key={edu.university}
+               initial={{ opacity: 0, y: 15 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, amount: 0.2 }}
+               transition={{ delay: i * 0.08, duration: 0.5, ease: 'easeOut' }}
+                 >
                  <div className="card p-8 md:p-10 rounded-xl relative overflow-hidden group">
                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-accent/60 via-accent/30 to-transparent" />
 

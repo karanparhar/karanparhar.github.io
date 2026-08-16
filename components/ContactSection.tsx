@@ -1,49 +1,49 @@
 'use client';
 
-import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { portfolioData } from '../data/content';
 import { Mail, Phone, MapPin, ArrowUpRight, Download } from 'lucide-react';
 
 const CONTACT_ITEMS = [
-  { icon: Mail, label: 'Email', value: 'mailto:karan.parhar90@gmail.com', text: 'karan.parhar90@gmail.com' },
-  { icon: Phone, label: 'Phone', value: 'tel:+919036765664', text: '+91 9036765664' },
-  { icon: MapPin, label: 'Location', value: '', text: 'Bengaluru, Karnataka, India' },
+   { icon: Mail, label: 'Email', value: 'mailto:karan.parhar90@gmail.com', text: 'karan.parhar90@gmail.com' },
+   { icon: Phone, label: 'Phone', value: 'tel:+919036765664', text: '+91 9036765664' },
+   { icon: MapPin, label: 'Location', value: '', text: 'Bengaluru, Karnataka, India' },
 ] as const;
 
 export default function ContactSection() {
-  const ref = useRef(null);
-
   return (
-    <section id="contact" ref={ref} className="py-28 md:py-36 px-6 md:px-12 lg:px-20 relative mb-20">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.015] to-transparent pointer-events-none" />
+       <section id="contact" className="py-28 md:py-36 px-6 md:px-12 lg:px-20 relative mb-20">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.015] to-transparent pointer-events-none" />
 
-      <div className="relative z-10 max-w-4xl">
-        <motion.h2
-          className="section-title mb-16"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-        >
-          Get in Touch
-        </motion.h2>
+        <div className="relative z-10 max-w-4xl">
+            <motion.h2
+           className="section-title mb-16"
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true, amount: 0.2 }}
+           transition={{ duration: 0.5, ease: 'easeOut' }}
+           >
+           Get in Touch
+            </motion.h2>
 
-        <motion.p
-          className="mt-6 text-text-secondary/70 text-lg mb-16 max-w-2xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.1, duration: 0.4 }}
-        >
-          I&apos;m always interested in hearing about new opportunities, collaborations, or just discussing technology and software engineering.
-        </motion.p>
+            <motion.p
+           className="mt-6 text-text-secondary/70 text-lg mb-16 max-w-2xl"
+           initial={{ opacity: 0 }}
+           whileInView={{ opacity: 1 }}
+           viewport={{ once: true }}
+           transition={{ delay: 0.1, duration: 0.4 }}
+           >
+           I&apos;m always interested in hearing about new opportunities, collaborations, or just discussing technology and software engineering.
+            </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <motion.div
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+             <motion.div
             className="card rounded-xl"
             initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2, duration: 0.4 }}
-          >
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ delay: 0.15, duration: 0.5, ease: 'easeOut' }}
+             >
             <h3 className="font-heading font-bold text-text-primary text-base uppercase tracking-widest mb-6">
               Contact
             </h3>
@@ -68,12 +68,13 @@ export default function ContactSection() {
             </div>
           </motion.div>
 
-          <motion.div
+              <motion.div
             className="card rounded-xl"
             initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3, duration: 0.4 }}
-          >
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ delay: 0.2, duration: 0.5, ease: 'easeOut' }}
+            >
             <h3 className="font-heading font-bold text-text-primary text-base uppercase tracking-widest mb-6">
               Connect
             </h3>
@@ -108,12 +109,13 @@ export default function ContactSection() {
           </motion.div>
         </div>
 
-        <motion.div
-          className="mt-12 p-8 md:p-10 rounded-xl bg-bg-card/80 border border-border backdrop-blur-sm text-center"
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.4 }}
-        >
+             <motion.div
+           className="mt-12 p-8 md:p-10 rounded-xl bg-bg-card/80 border border-border backdrop-blur-sm text-center"
+           initial={{ opacity: 0, y: 15 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true, amount: 0.2 }}
+           transition={{ delay: 0.3, duration: 0.5, ease: 'easeOut' }}
+            >
           <h3 className="font-heading text-xl font-bold text-text-primary mb-2 tracking-tight">
             Open to Opportunities
           </h3>

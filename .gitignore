@@ -1,6 +1,10 @@
 node_modules/
 .next/
 out/
+_next/
+index.html
+404.html
+.nojekyll
 *.tsbuildinfo
 .DS_Store
 **/.DS_Store

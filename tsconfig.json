@@ -15,7 +15,6 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "target": "ES2017",
-    "downlevelIteration": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
@@ -24,7 +23,6 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./*"
